@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<hr width = "100%" color = "#FFD966" size = "60">
+
+<h2>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 팀 선택 및 정보 기입 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </h2>
+
+<hr width = "100%" color = "#FFD966" size = "10">
+
+<h2>2.2 팀선택</h2>
+
+<form method = "post", action = "Incident_TeamAdd.php">
+
+<table  border="1" bordercolor="black" width ="40%" height="50" table-layout:fixed;>
+            <tr>
+                <th>팀</th>
+                <td>    
+            
+       
+        <select name="team" size = "1">
+        <!-- php에서 GET으로 요청 받은 파라미터 서, 부서 를 가지고 (팀ID, 팀 이름+ 처리개수)의 개수 만큼 반복하면서 "팀Id"를 value를 채운다. -->
+        <option value = "<?php echo $team_id ?>" selected> 형사 1팀(1건)</option>
+        <option value = "<?php echo $team_id ?>" >형사 2팀(2건)</option>
+        <option value = "<?php echo $team_id ?>" >형사 3팀(3건)</option>
+        </select</td>
+
+
+            </tr>
+            <tr>
+                <th>시작일시</th>
+                <td><input type="datetime" name = "start_date" min = "2010-01-01" placeholder="ex)2020-10-20 13:00:00"/></td>
+            </tr>
+            <tr>
+                <th>종료일시</th>
+                <td><input type="datetime" name = "end_date" min = "2010-01-01" placeholder="ex)2020-10-20 13:00:00"/></td>
+            </tr>
+</table>
+
+   <hr>
+   <input type = "submit" value = "다음">
+</form>
+
+<br>
+</body>
+</html>

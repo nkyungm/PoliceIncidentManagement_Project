@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<hr width = "100%" color = "#1369B8" size = "60">
+<h3> &nbsp&nbsp&nbsp&nbsp&nbsp사건 조회 </h3>
+<hr width = "100%" color = "#1369B8" size = "10">
+<br>
+
+<form method = "get", action = "Incident_Result1.php">
+	서: <select name = "station_name" size ="1">
+		<option> 동구 경찰서 </option> 
+		<option> 중구 경찰서 </option> 
+		<option> 북구 경찰서 </option> 
+		<option> 동구 경찰서> </option> 
+		<option> 수성구 경찰서 </option> 
+		<option> 남구경찰서 </option> 
+	</select>
+	
+	부서: <select name = "department_name" size ="1">
+		<option> 형사과 </option> 
+		<option> 수사과  </option> 
+		<option> 여성청소년과 </option> 
+		<option> 교통과</option> 
+	</select>
+
+	팀: <select name = "team_name" size ="1">
+		<option> 1팀 </option> 
+		<option> 2팀 </option> 
+		<option> 3팀 </option> 
+	</select> 
+
+	진행도: <select name = "progress_name" size ="1">
+		<option> 배정완료 </option> 
+		<option> 수사중 </option> 
+		<option> 수사완료 </option> 
+		<option> 미제 </option> 
+	</select> 
+
+	사건종류: <select name = "type_name" size ="1">
+		<option> 살인 </option> 
+		<option> 폭행 </option> 
+		<option> 성폭행 </option> 
+		<option> 음주 </option> 
+		<option> 절도 </option> 
+	</select> 
+
+	주소: <input type = "text" name = "address_name" placeholder = "ex) 구암로 62길"/>
+	
+	<button type = "submit"> 검색 </button>
+</form> <br>
+
+
+<form methon = "get" , action = "Incident_Result2.php">
+	서ID : <input type = "text", name = "station_id"/>
+	
+	<button type = "submit"> 검색 </button>
+</form> <br>
+
+</body>
+</html>

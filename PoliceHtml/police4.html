@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<hr width = "100%" color = "#1369B8" size = "60">
+<h3> &nbsp&nbsp&nbsp&nbsp&nbsp사건 수정 페이지 </h3>
+<hr width = "100%" color = "#1369B8" size = "10">
+<br>
+
+    <form method="POST" action="Incident_Update2.php">
+        <table border='1'>
+            <tr>
+                <th>사건 ID
+                <td>1</td>
+                </th>
+            </tr>
+
+            <tr>
+            <th>사건 종류
+                <td>살인</td>
+            </th>
+            </tr>
+
+            <tr>
+                <th>팀
+                    <td>
+                        북구 경찰서 형사과 1팀 1986-11-03 13:00:00 ~ 진행중 <br>
+                        북구 경찰서 형사과 2팀 1986-11-03 13:00:00 ~ 진행중
+                    </td>
+                
+                </th>
+            </tr>
+
+            <tr>
+                <th>시작일시
+                    <td>1986-11-01 15:00:00</td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>종료일시
+                    <td>
+                        <!-- 사건 종료일시가 null인지 비교하여 null이면 "placeholder"를 표시하고 null아니면 기존에 있는 값을 표시하기-->
+                        <input type = "datetime" name = "end_date" min = "2010-01-01" value = "<?php echo $end_date ?>" placeholder="ex)2020-10-20 13:00:00"/>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>사건 발생 주소
+                    <td>서구 서구2로 초밥아파트 1동</td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>진행도
+                    <td>
+                        <!-- php를 통해서 사건의 진행도를 if문으로 확인하여 "selected" 표시하기 -->
+                        <select name = "progress" size ="1" >
+                            <option> 배정완료 </option> 
+                            <option selected> 수사중 </option> 
+                            <option> 수사완료 </option> 
+                            <option> 미제 </option> 
+                        </select> 
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>신고자
+                    <td>
+                      구본식(19990727)<br>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>가해자
+                    <td>
+                        이창협(19991213)<br>
+                        구세바리(19990707)<br>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>피해자
+                    <td>
+                         강복수(19890102)<br>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>보고서
+                    <td>
+                        북구 경찰서 형사과 2팀(작성일:1990-12-10 07:30:00)<br>
+                        북구 경찰서 형사과 3팀(작성일:1990-01-10 14:30:00)<br>
+                        북구 경찰서 형사과 1팀(작성일:2022-11-13 09:52:18)<br>
+                    </td>
+                </th>
+            </tr>
+
+        </table>
+
+        <button type = "submit"> 수정완료 </button>
+    </form>
+
+</body>
+
+</html>

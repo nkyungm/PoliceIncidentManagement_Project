@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<hr width = "100%" color = "#FFD966" size = "60">
+
+<a href = "/search1.html"  > &nbsp;&nbsp; 사건 조회 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+<a href = "/policeM.html" > &nbsp;&nbsp; 경찰관 관리 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+<a href = "/IncidentAdd1.html" > &nbsp;&nbsp; 사건 등록 &nbsp;&nbsp;&nbsp;&nbsp; </a>
+<a href = "/statistics1.html" > &nbsp;&nbsp; 통계 &nbsp;&nbsp; </a>
+
+
+
+
+<hr width = "100%" color = "#FFD966" size = "10">
+<br>
+    <h2 style="color:#176CB9;display:inline;">- 서,부서,팀 별 통계</h2>
+    <h3 style="display:inline"># 서 별 통계는 고정 값입니다.</h3>
+    <br><br>
+
+    <form method="get" action="/ngm1.php">
+        <h3 style="display: inline">서</h3><input type="checkbox" checked disabled style="width:20px;height:20px;"/>
+        <h3 style="display: inline">부서</h3><input type="checkbox" name="statistics" value="d_n" style="width:20px;height:20px;"/>
+        <h3 style="display: inline">팀</h3><input type="checkbox" name="statistics" value="t_n" style="width:20px;height:20px;"/>
+        <input type="submit" value="검색"/>
+    </form>
+    <br>
+    <h2 style="color:#176CB9;display:inline;">- 지역별 통계</h2>
+    <h3 style="display:inline"># 구 별 통계는 고정 값입니다.</h3>
+    <br><br>
+
+    <form method="get" action="/ngm2.php">
+        <h3 style="display: inline">구</h3><input type="checkbox" checked disabled style="width:20px;height:20px;"/>
+        <h3 style="display: inline">로/동서</h3><input type="checkbox" name="statistics" value="" style="width:20px;height:20px;"/>
+        <input type="submit" value="검색"/>
+    </form>
+</body>
+</html>

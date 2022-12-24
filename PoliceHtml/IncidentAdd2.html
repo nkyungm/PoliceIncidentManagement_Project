@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<hr width = "100%" color = "#FFD966" size = "60">
+
+<h2>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 팀검색 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </h2>
+
+
+<hr width = "100%" color = "#FFD966" size = "10">
+
+<h2>2.1 팀선택을 위한 검색</h2>
+
+<form method = "get", action = "team_choice.php">
+<table  border="1" bordercolor="black" width ="40%" height="50" table-layout:fixed;>
+            <tr>
+                <th>서</th>
+                <td>
+        <select name="station" size = "1">
+        <option value = "동구경찰서" selected>동구경찰서</option>
+        <option value = "남구경찰서" >남구경찰서</option>
+        <option value = "서구경찰서" >서구경찰서</option>
+        <option value = "북구경찰서" >북구경찰서</option>
+        <option value = "중구경찰서" >중구경찰서</option>
+        <option value = "수성구경찰서" >수성구경찰서</option>
+    </select>
+</td>
+            </tr>
+            <tr>
+                <th>부서</th>
+                <td>
+    </select>
+        <select name="department" size = "1">
+        <option value = "수사과" selected>수사과</option>
+        <option value = "형사과" >형사과</option>
+        <option value = "교통과" >교통과</option>
+        <option value = "여성 청소년과" >여성 청소년과</option>
+    </select>
+</td>
+            </tr>
+</table>
+
+  <hr>
+   <input type = "submit" value = "다음">
+</form>
+
+</body>
+</html>

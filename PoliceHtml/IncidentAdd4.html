@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<hr width = "100%" color = "#FFD966" size = "60">
+
+<h2>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 사건 정보 기입 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </h2>
+
+<hr width = "100%" color = "#FFD966" size = "10">
+
+<h2>3. 사건 등록</h2>
+
+<form method = "post", action = "Incident_finalAdd.php">
+
+<!--앞서 Post 전달받은 팀 아이디 전송-->
+<input type = "text", name = "team_id" , value="<?php echo $_POST['team_id']" , hidden/>
+<!--앞서 Post 전달받은 팀 시작일시 전송-->
+<input type = "text", name = "team_startDate" , value="<?php echo $_POST['start_date']" , hidden/>
+<!--앞서 Post 전달받은 팀 종료일시 전송-->
+<input type = "text", name = "team_endDate" , value="<?php echo $_POST['end_date']" , hidden/>
+
+
+<table  border="1" bordercolor="black" width ="40%" height="50" table-layout:fixed;>
+            <tr>
+                <th>사건 종류</th>
+                <td><select name="사건종류">
+    <option value=defalut>선택</option>
+    <option value="살인">살인</option>
+    <option value="사기">사기</option>
+    <option value="성폭행">성폭행</option>
+    <option value="절도">절도</option>
+    <option value="폭행">폭행</option>
+    <option value="음주">음주</option>
+</select>
+</td>
+            </tr>
+            <tr>
+                <th>시작일시</th>
+                <td><input type="datetime" name = "start_date" min = "2010-01-01" placeholder="ex)2020-10-20 13:00:00"/></td>
+            </tr>
+             <tr>
+                <th>주소</th>
+                <td><input type = "text" name = "address" placeholder = "대구광역시 북구 123로 12 상세주소"/></td>
+            </tr>
+</table>
+
+   <hr>
+   <input type = "submit" value = "등록">
+</form>
+
+<br>
+</body>
+</html>
